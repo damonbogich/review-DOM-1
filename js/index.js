@@ -1,3 +1,5 @@
+//2. <header> <nav> - add href tags
+ 
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +42,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//1.<head> - change <title> to Great Idea!
+const title = document.querySelector('title');
+title.textContent = "Great Idea!";
+
+let navItems = document.querySelectorAll('nav a');
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
+navItems.forEach(element =>{
+  element.style.color = 'green';
+})
+console.log(navItems, 'dff')
+//3. <header> <img> - add img src
+let headerImg = document.querySelector('.logo');
+let headerImgSrc = siteContent['nav']['img-src'];
+headerImg.setAttribute('src', headerImgSrc);
+console.log(headerImg)
+//4. 
+let ctaHeader = document.querySelector('.cta-text h1')
+ctaHeader.textContent = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent['cta']['button']
+
+let ctaImg = document.querySelector('.cta img')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+
